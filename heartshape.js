@@ -34,8 +34,6 @@ function setup() {
   let w = (width - offset * 2 - margin * (cells - 1)) / cells;
   let h = (height - offset * 2 - margin * (cells - 1)) / cells;
 
-  //格子状に図形を配置する基本的な方法
-  //2重for文で縦横方向にxyの位置を計算し，その位置を基準に図形を配置する
   for (let j = 0; j < cells; j++) {
     for (let i = 0; i < cells; i++) {
       let x = offset + i * (w + margin);
@@ -43,8 +41,8 @@ function setup() {
       let cx = x + w / 2;
       let cy = y + h / 2;
       let d = w;
-      let rotate_num = int(random(4)); // 0〜3の整数
-      rotate_num = rotate_num * 90; // 0,90,180,270
+      let rotate_num = int(random(4)); 
+      rotate_num = rotate_num * 90; 
       let shape_num = int(random(4));
 
       let c = random(colors);
